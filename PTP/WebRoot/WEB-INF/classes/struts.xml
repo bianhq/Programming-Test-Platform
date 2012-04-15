@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="PTP" extends="struts-default">
+	<!--注册与登录 -->
+		<action name="ulogin" class="stu.action.StuAction" method="Login">
+			<result name="success_adm">/Jsp/Adm/administer.jsp</result>
+			<result name="success_teac">/Jsp/Teac/teac.jsp</result>
+			<result name="success_stu">welcome.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="sturegister" class="stu.action.StuAction" method="Register">
+			<result name="success">welcome.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<!-- 管理员部分 -->
+		<action name="logs" class="adm.action.AdmAction" method="showLogs">
+		<result name="success">./Jsp/Adm/infor.jsp</result>
+		</action>
+		<action name="add_prior" class="adm.action.AdmAction" method="addPower">
+			<result name="success">priority.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="list_prior" class="adm.action.AdmAction" method="listPower">
+			<result name="success">priority.jsp</result>
+		</action>
+		<action name="add_aut" class="adm.action.AdmAction" method="setTaccount">
+		<result name="success">account.jsp</result>
+		</action>
+		<action name="lst_aut" class="adm.action.AdmAction" method="lstTaccount">
+		<result name="success">account.jsp</result>
+		</action>
+		<action name="add_lang" class="adm.action.AdmAction" method="addLang">
+			<result name="success">setting.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="list_lang" class="adm.action.AdmAction" method="listLang">
+			<result name="success">setting.jsp</result>
+		</action>
+		<action name="A_logout" class="adm.action.AdmAction" method="Logout">
+		<result name="success">logout.jsp</result>
+		<result name="error">error.jsp</result>
+		</action>
+		<!-- 教师部分 -->
+		<action name="add_course" class="teac.action.TeacAction" method="addCourse">
+			<result name="success">course.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="list_course" class="teac.action.TeacAction" method="listCourse">
+			<result name="success">course.jsp</result>
+		</action>
+		<action name="add_subject" class="teac.action.TeacAction" method="addSubject">
+			<result name="success">subjects.jsp</result>
+		</action>
+		<action name="list_subject" class="teac.action.TeacAction" method="listSubject">
+			<result name="success">subjects.jsp</result>
+		</action>
+		<action name="T_logout" class="teac.action.TeacAction" method="Logout">
+		<result name="success">logout.jsp</result>
+		<result name="error">error.jsp</result>
+		</action>
+		<!-- 学生部分 -->
+		<action name="logout" class="stu.action.StuAction" method="Logout">
+		<result name="success">logout.jsp</result>
+		<result name="error">error.jsp</result>
+		</action>
+		<action name="subjects" class="stu.action.StuexcAction" method="showList">
+		<result name="success">subjects.jsp</result>
+		</action>
+		<action name="selected" class="stu.action.StuexcAction" method="showSub">
+		<result name="success">subject.jsp</result>
+		</action>
+		<action name="codes" class="stu.action.StuexcAction" method="runCode">
+		<result name="success">subjects.jsp</result>
+		</action>
+	</package>
+</struts>

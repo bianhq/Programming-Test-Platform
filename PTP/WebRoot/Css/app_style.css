@@ -1,0 +1,52 @@
+body {
+	background-color: #4E5869;
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-top: 0%;
+	padding: 0;
+	color: red;
+}
+
+.content {
+	background-color: #FFF;
+}
+
+.head {
+	padding: 0;
+}
+
+.logo {
+	padding-left: 15;
+	padding-bottom: 0;
+	margin: 0;
+}
+
+.sign {
+	margin-left: 90%;
+}
+
+.main {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.left {
+	height: 180px;
+	width: 160px;
+}
+
+.right {
+	height: 100%;
+	margin-left: 160px;
+	margin-top: -170px;
+	margin-right: 0;
+	margin-bottom: 0;
+}
+
+.footer {
+	margin-left: 34%;
+	margin-top: 0%;
+	padding: 0;
+	color: red;
+}
